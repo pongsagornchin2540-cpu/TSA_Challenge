@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ระบบจัดการเพิ่มเติม · TSA Data to Value Challenge 2569</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f4faff;color:#17263d;font-family:"Sarabun",sans-serif;font-size:16px;line-height:1.55}
+.admin-shell{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:100vh}
+.admin-sidebar{position:sticky;top:0;height:100vh;overflow:auto;padding:20px 14px;background:#17263d;color:#fff}
+.admin-sidebar h1{display:flex;align-items:center;gap:12px;margin:0 0 20px;font-family:"Noto Sans Thai",sans-serif;font-size:20px}
+.admin-sidebar h1 img{display:block;width:96px;height:auto;object-fit:contain}
+.admin-sidebar nav{display:grid;gap:6px}
+.admin-sidebar a{display:flex;min-height:44px;align-items:center;padding:8px 10px;border-radius:9px;color:#fff;text-decoration:none}
+.admin-sidebar a:hover,.admin-sidebar a[aria-current=location]{background:#baff19;color:#17263d}
+main{min-width:0;padding:24px}
+main h2,main h3{font-family:"Noto Sans Thai",sans-serif}
+.tools-intro{max-width:900px;margin-bottom:20px}
+.tool-section{max-width:1000px;margin:0 0 20px;padding:18px;border:2px solid #17263d;border-radius:14px;background:#fff}
+.tool-section h2{margin:0 0 10px}
+.tool-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;align-items:end}
+.tool-form label{display:flex;flex-direction:column;gap:5px;font-weight:700}
+.tool-form input,.tool-form select,.tool-form textarea,#provinceGroupRows select{min-height:44px;padding:8px 10px;border:2px solid #17263d;border-radius:9px;background:#fff;color:#17263d;font:inherit}
+.tool-form textarea{min-height:90px}
+.tool-form button{min-height:46px;padding:8px 14px;border:2px solid #17263d;border-radius:10px;background:#baff19;color:#17263d;font:inherit;font-weight:800;cursor:pointer}
+.table-frame{max-height:420px;overflow:auto;border:1px solid #d6e2f0;border-radius:10px}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:8px 12px;border-bottom:1px solid #d6e2f0}
+thead{position:sticky;top:0;background:#17263d;color:#fff}
+ul{padding-left:22px}
+.locked{padding:10px;border-radius:9px;background:#fff7d6;font-weight:700}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:760px){.admin-shell{grid-template-columns:1fr}.admin-sidebar{position:relative;height:auto}.admin-sidebar nav{grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}main{padding:16px}.tool-section{padding:14px}}
+</style>
+</head>
+<body>
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <h1><img src="assets/tsa-logo.png" alt="Thailand Sports Almanac"><span>ระบบหลังบ้าน</span></h1>
+    <nav aria-label="เมนูจัดการ">
+      <a href="admin.html">แดชบอร์ด</a>
+      <a href="admin-rounds.html">รอบรับสมัครและอีเมล</a>
+      <a href="admin-applicants.html">ผู้สมัคร</a>
+      <a href="admin-tools.html#tasks">ภารกิจข้อมูล</a>
+      <a href="admin-scores.html">คะแนนและประกาศผล</a>
+      <a href="admin-tools.html#groups">กลุ่มจังหวัด</a>
+      <a href="admin-tools.html#appeals">คำทักท้วง</a>
+      <a href="admin-tools.html#audit">ประวัติการทำงาน</a>
+      <a href="admin-tools.html#roles">สิทธิ์ผู้ใช้และบทบาท</a>
+    </nav>
+  </aside>
+  <main data-admin-tools>
+    <div class="tools-intro">
+      <h1>เครื่องมือจัดการเพิ่มเติม</h1>
+      <p>จัดการภารกิจ กลุ่มจังหวัด คำทักท้วง ประวัติ และบทบาทผู้ใช้ตามโครงเมนูของโครงการ</p>
+    </div>
+    <section class="tool-section" id="tasks">
+      <h2>ภารกิจข้อมูล</h2>
+      <p>กำหนดภารกิจรายคนแยกรอบ ระบบเดโมป้องกันการลดเป้าหมายย้อนหลังและบันทึกการเปลี่ยนแปลง</p>
+      <form class="tool-form" id="taskForm">
+        <label>ผู้สมัคร<select name="applicantId" id="taskApplicant" required></select></label>
+        <label>รอบ<select name="round" required><option value="r1">รอบที่ 1</option><option value="r2">รอบที่ 2</option></select></label>
+        <label>จำนวนภารกิจ<input type="number" name="assigned" min="1" step="1" required></label>
+        <label>รหัสรายการ TSA<input name="recordId" required></label>
+        <label>ประเภทภารกิจ<select name="kind"><option value="new">เพิ่มข้อมูลใหม่</option><option value="update">ปรับปรุงข้อมูล</option><option value="verify">ตรวจสอบข้อมูล</option></select></label>
+        <button type="submit">มอบหมาย / บันทึก</button>
+      </form>
+      <h3>ภารกิจที่บันทึกในเดโมนี้</h3>
+      <ul id="taskList"></ul>
+    </section>
+    <section class="tool-section" id="groups">
+      <h2>กลุ่มจังหวัด</h2>
+      <p>กลุ่มตั้งต้นเป็นบัญชีเบื้องต้นสำหรับต้นแบบ ผู้ดูแลสามารถปรับแต่ละจังหวัดได้ ควรตรวจเทียบประกาศ สศช. ก่อนใช้งานจริง</p>
+      <div class="table-frame">
+        <table>
+          <thead><tr><th scope="col">จังหวัด</th><th scope="col">กลุ่มจังหวัด</th></tr></thead>
+          <tbody id="provinceGroupRows"></tbody>
+        </table>
+      </div>
+    </section>
+    <section class="tool-section" id="appeals">
+      <h2>คำทักท้วง</h2>
+      <p class="locked" id="appealAvailability" aria-live="polite"></p>
+      <form class="tool-form" id="appealForm">
+        <label>รอบ<select name="round" required><option value="r1">รอบที่ 1</option><option value="r2">รอบที่ 2</option></select></label>
+        <label>รายการ/เกณฑ์ที่ทักท้วง<input name="itemRef" required></label>
+        <label>เหตุผล<textarea name="reason" required></textarea></label>
+        <button type="submit">ยื่นคำทักท้วง</button>
+      </form>
+      <ul id="appealList"></ul>
+    </section>
+    <section class="tool-section" id="audit">
+      <h2>ประวัติการทำงาน</h2>
+      <p>รายการในเดโมบันทึกการกระทำและเวลาในเบราว์เซอร์นี้เท่านั้น ไม่ใช่หลักฐานที่ป้องกันการแก้ไข</p>
+      <ul id="auditList"></ul>
+    </section>
+    <section class="tool-section" id="roles">
+      <h2>สิทธิ์ผู้ใช้และบทบาท</h2>
+      <ul>
+        <li>ผู้ดูแลระบบ — จัดการการตั้งค่าระบบ</li>
+        <li>ผู้ประสานงานจังหวัด — ดูแลผู้สมัครและภารกิจในพื้นที่</li>
+        <li>ผู้ตรวจสอบ — ตรวจรายการและคะแนน</li>
+        <li>ผู้อนุมัติ — อนุมัติผู้สมัครและรายการที่ต้องพิจารณา</li>
+        <li>ผู้รับรองผล — รับรองผลโดยต้องไม่ใช่ผู้กรอกหรือผู้ตรวจคะแนน</li>
+      </ul>
+      <p class="locked">หน้าต้นแบบนี้ไม่ได้บังคับใช้สิทธิ์จริง การแยกหน้าที่และการป้องกันอนุมัติงานของตนเองต้องทำใน backend</p>
+    </section>
+  </main>
+</div>
+<script defer src="app.js"></script>
+</body>
+</html>

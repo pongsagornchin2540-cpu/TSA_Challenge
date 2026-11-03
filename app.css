@@ -1,0 +1,874 @@
+:root {
+  color-scheme: light;
+  --tsa-navy: #17263d;
+  --tsa-lime: #baff19;
+  --tsa-blue: #148aea;
+  --tsa-ice: #eaf5ff;
+  --tsa-muted: #4a5a70;
+  --tsa-border: #d6e2f0;
+  --tsa-danger: #b42318;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid var(--tsa-blue) !important;
+  outline-offset: 3px;
+}
+
+.tsa-registration-form {
+  display: flex;
+  flex-direction: column;
+  border: 2.5px solid var(--tsa-navy);
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.tsa-registration-form fieldset {
+  min-width: 0;
+  border: 0;
+  margin: 0;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.tsa-registration-form legend {
+  width: 100%;
+  padding: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--tsa-navy);
+  font-family: "Noto Sans Thai", sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.tsa-step-number {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 46px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--tsa-navy);
+  color: var(--tsa-lime);
+  transform: skewX(-10deg);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.tsa-step-status {
+  margin-left: auto;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--tsa-ice);
+  color: var(--tsa-navy);
+  font-family: "Sarabun", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.tsa-step-status.is-complete {
+  background: var(--tsa-lime);
+}
+
+.tsa-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.tsa-field-label {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--tsa-navy);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.tsa-field-label input,
+.tsa-field-label select {
+  width: 100%;
+  min-height: 50px;
+  border: 2px solid var(--tsa-navy);
+  border-radius: 12px;
+  padding: 0 12px;
+  background: #fff;
+  color: var(--tsa-navy);
+  font-size: 16px;
+}
+
+.tsa-field-label input[readonly] {
+  background: #f4faff;
+  color: var(--tsa-muted);
+}
+
+.tsa-radio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 8px;
+}
+
+.tsa-choice {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border: 2px solid var(--tsa-navy);
+  border-radius: 12px;
+  color: var(--tsa-navy);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tsa-choice:has(input:checked) {
+  background: var(--tsa-navy);
+  color: var(--tsa-lime);
+}
+
+.tsa-choice input,
+.tsa-consent input,
+.tsa-clinic-choice input {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  accent-color: var(--tsa-navy);
+}
+
+.tsa-consent,
+.tsa-clinic-choice {
+  display: flex;
+  min-height: 48px;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 9px 0;
+  border-top: 1px solid var(--tsa-border);
+  color: var(--tsa-navy);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tsa-section-divider {
+  position: relative;
+  border-top: 2.5px dashed var(--tsa-navy);
+}
+
+.tsa-section-divider::before,
+.tsa-section-divider::after {
+  position: absolute;
+  top: -13px;
+  width: 22px;
+  height: 22px;
+  border: 2.5px solid var(--tsa-navy);
+  border-radius: 50%;
+  background: #fff;
+  content: "";
+}
+
+.tsa-section-divider::before {
+  left: -13px;
+}
+
+.tsa-section-divider::after {
+  right: -13px;
+}
+
+.tsa-registration-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.tsa-progress-track {
+  height: 10px;
+  overflow: hidden;
+  border: 1px solid var(--tsa-navy);
+  border-radius: 999px;
+  background: var(--tsa-ice);
+}
+
+.tsa-progress-track span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--tsa-lime);
+  transition: width 160ms ease;
+}
+
+.tsa-submit-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+  border-radius: 16px;
+  background: var(--tsa-navy);
+  color: #fff;
+  box-shadow: 5px 6px 0 var(--tsa-lime);
+}
+
+.tsa-submit-panel button {
+  min-height: 52px;
+  border: 2px solid var(--tsa-navy);
+  border-radius: 12px;
+  background: var(--tsa-lime);
+  color: var(--tsa-navy);
+  font-family: "Noto Sans Thai", sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.tsa-submit-panel button:disabled {
+  border-color: #69788c;
+  background: #69788c;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.tsa-submit-panel .tsa-missing-link {
+  min-height: 44px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.tsa-field-error {
+  border-color: var(--tsa-danger) !important;
+  box-shadow: 0 0 0 2px rgba(180, 35, 24, 0.12);
+}
+
+.tsa-inline-error {
+  color: var(--tsa-danger);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tsa-admin-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.tsa-admin-table-wrap table {
+  min-width: 680px;
+}
+
+.tsa-registration-page {
+  min-height: 100vh;
+  background: #fff !important;
+}
+
+.tsa-registration-page > header {
+  border-bottom: 5px solid var(--tsa-lime);
+}
+
+.tsa-registration-page > header > div:first-child {
+  max-width: 1280px !important;
+  padding: 12px 28px !important;
+}
+
+.tsa-brand-logo {
+  display: block;
+  width: auto;
+  height: 42px;
+  object-fit: contain;
+}
+
+.tsa-registration-page > header > div:nth-child(2) {
+  max-width: 1280px !important;
+  min-height: 150px;
+  padding: 26px 28px 30px !important;
+}
+
+.tsa-registration-page > header h1 {
+  font-size: clamp(32px, 4vw, 46px) !important;
+  letter-spacing: -0.035em;
+}
+
+.tsa-registration-page > header nav a {
+  border-radius: 8px;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+.tsa-registration-page > header nav a:hover {
+  background: #2a3c57;
+  color: #fff !important;
+}
+
+.tsa-registration-steps [data-progress-step] {
+  border: 1px solid #40516a;
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+
+.tsa-registration-steps [data-progress-step] span {
+  background: #40516a !important;
+  color: #fff !important;
+}
+
+.tsa-registration-steps [data-progress-step].is-current span {
+  background: #fff !important;
+  color: var(--tsa-navy) !important;
+}
+
+.tsa-registration-steps [data-progress-step].is-complete span {
+  background: var(--tsa-lime) !important;
+  color: var(--tsa-navy) !important;
+}
+
+.tsa-registration-steps [data-progress-step].is-current {
+  border-color: var(--tsa-blue);
+  background: var(--tsa-blue) !important;
+  color: #fff !important;
+}
+
+.tsa-registration-steps [data-progress-step].is-complete {
+  border-color: var(--tsa-lime);
+  background: #263a21 !important;
+  color: #fff !important;
+}
+
+.tsa-registration-page > div {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  align-items: start !important;
+  gap: 24px !important;
+  max-width: 1280px !important;
+  padding: 48px 28px 64px !important;
+}
+
+.tsa-registration-page .tsa-registration-form {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none;
+}
+
+.tsa-registration-page .tsa-registration-form fieldset {
+  padding: 26px 28px;
+  gap: 22px;
+  border: 1px solid #d5dfeb;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(23, 38, 61, 0.04);
+}
+
+.tsa-registration-page .tsa-registration-form fieldset:nth-of-type(even) {
+  background: #fff;
+}
+
+.tsa-registration-page .tsa-registration-form fieldset:last-of-type {
+  border-bottom: 1px solid #d5dfeb;
+}
+
+.tsa-registration-page .tsa-registration-form legend {
+  padding-bottom: 14px;
+  font-size: 21px;
+}
+
+.tsa-registration-page .tsa-step-number {
+  width: 42px;
+  height: 34px;
+  border-radius: 7px;
+}
+
+.tsa-registration-page .tsa-field-label {
+  gap: 8px;
+  font-size: 15px;
+}
+
+.tsa-registration-page .tsa-field-label input,
+.tsa-registration-page .tsa-field-label select {
+  min-height: 48px;
+  border: 1px solid #b9c6d5;
+  border-radius: 9px;
+  padding: 0 13px;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.tsa-registration-page .tsa-field-label input:focus,
+.tsa-registration-page .tsa-field-label select:focus {
+  border-color: var(--tsa-blue);
+  box-shadow: 0 0 0 3px rgba(20, 138, 234, 0.14);
+  outline: none;
+}
+
+.tsa-registration-page .tsa-choice {
+  min-height: 52px;
+  border: 1px solid #b9c6d5;
+  border-radius: 9px;
+  padding: 10px 14px;
+}
+
+.tsa-registration-page .tsa-choice:has(input:checked) {
+  border-color: var(--tsa-navy);
+}
+
+.tsa-registration-page .tsa-registration-form [role="radiogroup"][aria-label="ประเภทหน่วยงาน"] {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.tsa-registration-page .tsa-section-divider {
+  display: none;
+  border-color: #b9c6d5;
+}
+
+.tsa-registration-page .tsa-section-divider::before,
+.tsa-registration-page .tsa-section-divider::after {
+  border-color: #b9c6d5;
+  background: #f7f9fc;
+}
+
+.tsa-registration-page .tsa-applicant-summary {
+  position: sticky;
+  top: 16px;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #d5dfeb;
+  border-radius: 14px;
+  box-shadow: none;
+}
+
+.tsa-applicant-summary h2,
+.tsa-next-steps h2 {
+  margin: 0 0 12px;
+  font-family: "Noto Sans Thai", sans-serif;
+  font-size: 19px;
+}
+
+.tsa-applicant-summary p {
+  margin: 8px 0;
+  color: var(--tsa-muted);
+  font-size: 14px;
+}
+
+.tsa-applicant-summary [data-summary-name] {
+  color: var(--tsa-navy);
+  font-family: "Noto Sans Thai", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.tsa-registration-page .tsa-submit-panel {
+  margin: 20px 24px 24px;
+  padding: 22px 24px;
+  border-radius: 14px;
+  box-shadow: none;
+}
+
+.tsa-next-steps {
+  padding: 16px 18px;
+  border: 1px solid #d5dfeb;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--tsa-navy);
+  font-size: 14px;
+}
+
+.tsa-next-steps ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.tsa-next-steps li + li {
+  margin-top: 8px;
+}
+
+.tsa-error-summary {
+  margin: 18px 22px 0;
+  padding: 14px 16px;
+  border: 1px solid var(--tsa-danger);
+  border-left: 5px solid var(--tsa-danger);
+  border-radius: 10px;
+  background: #fff5f4;
+  color: var(--tsa-navy);
+}
+
+.tsa-error-summary h2 {
+  margin: 0 0 4px;
+  font-family: "Noto Sans Thai", sans-serif;
+  font-size: 18px;
+}
+
+.tsa-error-summary p {
+  margin: 0 0 4px;
+}
+
+.tsa-error-summary ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.tsa-error-summary a {
+  color: #8f1d15;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.tsa-registration-page .tsa-inline-error {
+  display: block;
+  margin-top: 3px;
+}
+
+.tsa-registration-page .tsa-consent {
+  border-color: #e2e8f0;
+  font-size: 15px;
+}
+
+.tsa-empty-state {
+  padding: 20px;
+  border: 2px dashed var(--tsa-border);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--tsa-muted);
+}
+
+.tsa-button-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border: 2px solid var(--tsa-navy);
+  border-radius: 12px;
+  background: var(--tsa-lime);
+  color: var(--tsa-navy);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.tsa-personal-page {
+  width: min(100% - 24px, 780px);
+  margin: 22px auto;
+  padding-bottom: 24px;
+}
+
+.tsa-personal-page h1,
+.tsa-personal-page h2 {
+  font-family: "Noto Sans Thai", sans-serif;
+}
+
+.tsa-personal-card {
+  margin-top: 14px;
+  padding: 18px;
+  border: 2.5px solid var(--tsa-navy);
+  border-radius: 16px;
+  background: #fff;
+}
+
+.tsa-private-note {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #fff7d6;
+  color: var(--tsa-navy);
+  font-size: 14px;
+}
+
+.tsa-applicant-dialog {
+  width: min(94vw, 600px);
+  max-height: 88vh;
+  overflow: auto;
+  border: 2.5px solid var(--tsa-navy);
+  border-radius: 16px;
+  padding: 20px;
+  color: var(--tsa-navy);
+}
+
+.tsa-applicant-dialog::backdrop {
+  background: rgba(23, 38, 61, 0.72);
+}
+
+.tsa-applicant-dialog form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.tsa-applicant-dialog h2,
+.tsa-applicant-dialog p,
+.tsa-applicant-dialog .tsa-dialog-consent,
+.tsa-applicant-dialog .tsa-dialog-actions {
+  grid-column: 1 / -1;
+}
+
+.tsa-applicant-dialog h2 {
+  margin: 0;
+  font-family: "Noto Sans Thai", sans-serif;
+}
+
+.tsa-applicant-dialog label {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+  font-weight: 700;
+}
+
+.tsa-applicant-dialog input,
+.tsa-applicant-dialog select {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 2px solid var(--tsa-navy);
+  border-radius: 9px;
+  background: #fff;
+  color: var(--tsa-navy);
+}
+
+.tsa-applicant-dialog .tsa-dialog-consent {
+  display: flex;
+  min-height: 44px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tsa-applicant-dialog .tsa-dialog-consent input {
+  width: 22px;
+  height: 22px;
+}
+
+.tsa-applicant-dialog .tsa-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.tsa-applicant-dialog .tsa-dialog-actions button {
+  min-height: 46px;
+  padding: 8px 14px;
+  border: 2px solid var(--tsa-navy);
+  border-radius: 10px;
+  background: var(--tsa-lime);
+  color: var(--tsa-navy);
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .tsa-registration-page > div {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tsa-registration-page > div > aside {
+    order: 1;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px !important;
+  }
+
+  .tsa-registration-page .tsa-applicant-summary {
+    position: static;
+    grid-row: span 2;
+  }
+
+  .tsa-registration-page .tsa-next-steps {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .tsa-registration-page > header > div:first-child,
+  .tsa-registration-page > header > div:nth-child(2) {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+  }
+
+  .tsa-registration-page > header nav {
+    width: 100%;
+    margin-left: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tsa-registration-page > header nav a {
+    justify-content: center;
+    padding: 0 6px !important;
+    font-size: 14px;
+  }
+
+  .tsa-registration-page > header > div:nth-child(2) {
+    align-items: flex-start !important;
+    gap: 18px !important;
+  }
+
+  .tsa-registration-page > header > div:nth-child(2) ol {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+  }
+
+  .tsa-registration-page > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px !important;
+      padding: 32px 14px 48px !important;
+  }
+
+  .tsa-registration-page > div > aside {
+    order: 1;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tsa-registration-page .tsa-registration-form [role="radiogroup"][aria-label="ประเภทหน่วยงาน"] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tsa-registration-page .tsa-applicant-summary {
+    grid-row: auto;
+  }
+
+  .tsa-registration-page .tsa-registration-form fieldset {
+    padding: 22px 18px;
+    gap: 16px;
+  }
+
+  .tsa-registration-page .tsa-applicant-summary {
+    position: static;
+  }
+
+  .tsa-error-summary {
+    margin: 14px 14px 0;
+  }
+
+  .tsa-registration-form {
+    border-radius: 16px;
+  }
+
+  .tsa-registration-form fieldset {
+    padding: 20px 16px;
+    gap: 16px;
+  }
+
+  .tsa-registration-form legend {
+    gap: 8px;
+    font-size: 19px;
+  }
+
+  .tsa-field-grid {
+    gap: 12px;
+  }
+
+  .tsa-registration-page .tsa-submit-panel {
+    margin: 16px;
+    padding: 18px;
+  }
+
+  .tsa-mobile-submit {
+    position: fixed !important;
+    z-index: 30;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid !important;
+    grid-template-columns: minmax(84px, 0.8fr) minmax(0, 1.8fr);
+    gap: 10px;
+    padding: 10px 14px max(12px, env(safe-area-inset-bottom)) !important;
+    background: var(--tsa-navy) !important;
+  }
+
+  .tsa-mobile-submit .tsa-submit-panel {
+    display: contents;
+  }
+
+  .tsa-mobile-submit .tsa-progress-copy {
+    grid-column: 1;
+    color: #fff;
+  }
+
+  .tsa-mobile-submit .tsa-progress-copy strong {
+    display: block;
+    color: var(--tsa-lime);
+    font-family: "Noto Sans Thai", sans-serif;
+    font-size: 23px;
+    line-height: 1.1;
+  }
+
+  .tsa-mobile-submit .tsa-progress-copy span {
+    font-size: 12px;
+  }
+
+  .tsa-mobile-submit .tsa-progress-track,
+  .tsa-mobile-submit .tsa-missing-link {
+    display: none;
+  }
+
+  .tsa-mobile-submit button[type="submit"] {
+    grid-column: 2;
+  }
+
+  body:has(.tsa-mobile-submit) {
+    padding-bottom: 94px;
+  }
+}
+
+@media (max-width: 420px) {
+  .tsa-brand-logo {
+    height: 36px;
+  }
+
+  .tsa-registration-page > header h1 {
+    font-size: 30px !important;
+  }
+
+  .tsa-registration-steps [data-progress-step] {
+    justify-content: flex-start;
+    font-size: 13px !important;
+  }
+
+  .tsa-field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tsa-applicant-dialog form {
+    grid-template-columns: 1fr;
+  }
+
+  .tsa-step-status {
+    padding: 2px 7px;
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

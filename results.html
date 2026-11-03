@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ผลการแข่งขัน · TSA Data to Value Challenge 2569</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&amp;family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#148AEA}a:hover{color:#17263D}
+</style>
+<style>*{box-sizing:border-box}img{max-width:100%}</style>
+
+</head>
+<body>
+<div style="font-family: 'Sarabun', sans-serif; color: #17263D; background: #ffffff; font-size: 17px; line-height: 1.6">
+  <header style="background: #17263D; color: #ffffff">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+      <a href="index.html" aria-label="Thailand Sports Almanac - หน้าแรก" style="display: flex; align-items: center; gap: 12px; color: #ffffff; text-decoration: none"><img class="tsa-brand-logo" src="assets/tsa-logo.png" alt="Thailand Sports Almanac"></a>
+      <nav aria-label="เมนูหลัก" style="display: flex; flex-wrap: wrap; gap: 4px; margin-left: auto">
+        <a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; color: #b9c7da; font-weight: 600; text-decoration: none">หน้าแรก</a>
+        <a href="rules.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; color: #b9c7da; font-weight: 600; text-decoration: none">กติกาและรางวัล</a>
+        <a href="results.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; color: #ffffff; font-weight: 700; text-decoration: none; border-bottom: 3px solid #baff19">ผลการแข่งขัน</a>
+        <a href="my.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; color: #b9c7da; font-weight: 600; text-decoration: none">การสมัครของฉัน</a>
+      </nav>
+      <a href="register.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; background: #baff19; color: #17263D; font-weight: 800; text-decoration: none; border-radius: 12px">สมัครเข้าร่วม</a>
+    </div>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 28px 24px 24px; border-top: 1px solid #2a3c57; display: flex; flex-direction: column; gap: 16px">
+      <div style="display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: flex-end; justify-content: space-between">
+        <div>
+          <h1 style="margin: 0; font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 48px; line-height: 1.15">ผลการแข่งขัน</h1>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; font-size: 15px">
+            <span style="background: #148AEA; color: #ffffff; border-radius: 999px; padding: 2px 12px; font-weight: 800">ผลเบื้องต้น · รอรับรอง</span>
+            <span style="color: #c6d3e4">ไม่มีข้อมูลอัปเดตสด · ข้อมูลตัวอย่าง</span>
+          </div>
+        </div>
+        <form style="display: flex; gap: 8px; min-width: 0; flex: 0 1 420px">
+          <label for="r-q" style="position: absolute; width: 1px; height: 1px; overflow: hidden">ค้นหาด้วยรหัสผู้สมัครหรือชื่อ</label>
+          <input id="r-q" type="text" placeholder="ค้นหารหัสผู้สมัคร ชื่อ หรือจังหวัด" style="flex: 1; min-width: 0; min-height: 50px; border-radius: 12px; border: 2px solid #3a4c66; background: #22344f; color: #ffffff; padding: 0 14px; font: inherit">
+          <a href="my.html" style="display: inline-flex; align-items: center; min-height: 50px; padding: 0 18px; border-radius: 12px; background: #148AEA; color: #ffffff; font-weight: 800; text-decoration: none">ค้นหา</a>
+        </form>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px">
+        
+          <div role="group" aria-label="รอบ" style="display: flex; gap: 4px; padding: 4px; border-radius: 14px; background: #22344f">
+            
+              <button type="button" aria-pressed="true" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 10px; background: #baff19; color: #17263D; font: inherit; font-weight: 800">รอบที่ 1</button>
+            
+              <button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 10px; background: transparent; color: #ffffff; font: inherit; font-weight: 800">รอบที่ 2</button>
+            
+          </div>
+        
+          <div role="group" aria-label="กลุ่มจังหวัด" style="display: flex; gap: 4px; padding: 4px; border-radius: 14px; background: #22344f">
+            
+              <button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 10px; background: transparent; color: #ffffff; font: inherit; font-weight: 800">จังหวัดเล็ก</button>
+            
+              <button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 10px; background: transparent; color: #ffffff; font: inherit; font-weight: 800">จังหวัดกลาง</button>
+            
+              <button type="button" aria-pressed="true" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 10px; background: #baff19; color: #17263D; font: inherit; font-weight: 800">จังหวัดใหญ่</button>
+            
+          </div>
+        
+          <div role="group" aria-label="ประเภท" style="display: flex; gap: 4px; padding: 4px; border-radius: 14px; background: #22344f">
+            
+              <button type="button" aria-pressed="true" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 10px; background: #baff19; color: #17263D; font: inherit; font-weight: 800">รางวัลบุคคล</button>
+            
+              <button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 16px; border: 0; border-radius: 10px; background: transparent; color: #ffffff; font: inherit; font-weight: 800">โล่จังหวัด</button>
+            
+          </div>
+        
+      </div>
+    </div>
+  </header>
+
+  <div style="max-width: 1200px; margin: 0 auto; padding: 32px 24px 56px; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+    <div style="flex: 999 1 640px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+      <div style="display: flex; align-items: flex-end; justify-content: center; gap: 14px; background: #EAF5FF; border-radius: 22px; padding: 24px 20px 0">
+        
+          <div style="flex: 1 1 0; max-width: 200px; display: flex; flex-direction: column; align-items: center; gap: 6px">
+            <div style="text-align: center; line-height: 1.3"><div style="font-weight: 800; font-size: 17px">วราภรณ์ ส.</div><div style="font-size: 14.5px; color: #3e4f66">ขอนแก่น</div></div>
+            <div style="width: 100%; height: 150px; background: #148AEA; color: #ffffff; border-radius: 16px 16px 0 0; border: 2.5px solid #17263D; border-bottom: 0; display: flex; flex-direction: column; align-items: center; padding-top: 10px">
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 44px; line-height: 1">2</span>
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 21px">94.50</span>
+              <span style="font-size: 14px; font-weight: 700">10,000 ฿</span>
+            </div>
+          </div>
+        
+          <div style="flex: 1 1 0; max-width: 200px; display: flex; flex-direction: column; align-items: center; gap: 6px">
+            <div style="text-align: center; line-height: 1.3"><div style="font-weight: 800; font-size: 17px">สมชาย ก.</div><div style="font-size: 14.5px; color: #3e4f66">เชียงใหม่</div></div>
+            <div style="width: 100%; height: 196px; background: #baff19; color: #17263D; border-radius: 16px 16px 0 0; border: 2.5px solid #17263D; border-bottom: 0; display: flex; flex-direction: column; align-items: center; padding-top: 10px">
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 44px; line-height: 1">1</span>
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 21px">96.67</span>
+              <span style="font-size: 14px; font-weight: 700">15,000 ฿</span>
+            </div>
+          </div>
+        
+          <div style="flex: 1 1 0; max-width: 200px; display: flex; flex-direction: column; align-items: center; gap: 6px">
+            <div style="text-align: center; line-height: 1.3"><div style="font-weight: 800; font-size: 17px">ณัฐพล ร.</div><div style="font-size: 14.5px; color: #3e4f66">นครราชสีมา</div></div>
+            <div style="width: 100%; height: 120px; background: #ffffff; color: #17263D; border-radius: 16px 16px 0 0; border: 2.5px solid #17263D; border-bottom: 0; display: flex; flex-direction: column; align-items: center; padding-top: 10px">
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 44px; line-height: 1">3</span>
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 21px">93.33</span>
+              <span style="font-size: 14px; font-weight: 700">8,000 ฿</span>
+            </div>
+          </div>
+        
+      </div>
+
+      <div style="border: 2.5px solid #17263D; border-radius: 18px; overflow-x: auto">
+        <div style="min-width: 680px">
+          <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) 150px 90px 90px 90px 104px; gap: 10px; padding: 11px 18px; background: #17263D; color: #ffffff; font-size: 14.5px; font-weight: 700">
+            <span>อันดับ</span><span>ผู้แข่งขัน</span><span>จังหวัด</span><span style="text-align: right">หน่วยผลงาน</span><span style="text-align: right">ผ่านครั้งแรก</span><span style="text-align: right">คะแนน</span><span style="text-align: right">รางวัล</span>
+          </div>
+          
+            
+            <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) 150px 90px 90px 90px 104px; gap: 10px; align-items: center; padding: 11px 18px; border-top: 1.5px solid #d6e2f0; background: #f4faff; opacity: 1">
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 20px">01</span>
+              <span style="display: flex; align-items: center; gap: 6px; font-weight: 700">สมชาย ก.<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148AEA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="ผ่านการรับรอง"><path d="M20 6 9 17l-5-5"></path></svg></span>
+              <span style="color: #3e4f66">เชียงใหม่</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">14</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">92%</span>
+              <span style="text-align: right; font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 18px; font-variant-numeric: tabular-nums">96.67</span>
+              <span style="text-align: right; font-weight: 700; color: #0d6fc0">15,000 ฿</span>
+            </div>
+          
+            
+            <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) 150px 90px 90px 90px 104px; gap: 10px; align-items: center; padding: 11px 18px; border-top: 1.5px solid #d6e2f0; background: #f4faff; opacity: 1">
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 20px">02</span>
+              <span style="display: flex; align-items: center; gap: 6px; font-weight: 700">วราภรณ์ ส.<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148AEA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="ผ่านการรับรอง"><path d="M20 6 9 17l-5-5"></path></svg></span>
+              <span style="color: #3e4f66">ขอนแก่น</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">13</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">90%</span>
+              <span style="text-align: right; font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 18px; font-variant-numeric: tabular-nums">94.50</span>
+              <span style="text-align: right; font-weight: 700; color: #0d6fc0">10,000 ฿</span>
+            </div>
+          
+            
+            <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) 150px 90px 90px 90px 104px; gap: 10px; align-items: center; padding: 11px 18px; border-top: 1.5px solid #d6e2f0; background: #f4faff; opacity: 1">
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 20px">03</span>
+              <span style="display: flex; align-items: center; gap: 6px; font-weight: 700">ณัฐพล ร.<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148AEA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="ผ่านการรับรอง"><path d="M20 6 9 17l-5-5"></path></svg></span>
+              <span style="color: #3e4f66">นครราชสีมา</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">12</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">88%</span>
+              <span style="text-align: right; font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 18px; font-variant-numeric: tabular-nums">93.33</span>
+              <span style="text-align: right; font-weight: 700; color: #0d6fc0">8,000 ฿</span>
+            </div>
+          
+            
+            <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) 150px 90px 90px 90px 104px; gap: 10px; align-items: center; padding: 11px 18px; border-top: 1.5px solid #d6e2f0; background: #ffffff; opacity: 1">
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 20px">04</span>
+              <span style="display: flex; align-items: center; gap: 6px; font-weight: 700">ปิยะนุช ม.<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148AEA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="ผ่านการรับรอง"><path d="M20 6 9 17l-5-5"></path></svg></span>
+              <span style="color: #3e4f66">ชลบุรี</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">12</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">75%</span>
+              <span style="text-align: right; font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 18px; font-variant-numeric: tabular-nums">91.20</span>
+              <span style="text-align: right; font-weight: 700; color: #0d6fc0">6,000 ฿</span>
+            </div>
+          
+            
+            <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) 150px 90px 90px 90px 104px; gap: 10px; align-items: center; padding: 11px 18px; border-top: 1.5px solid #d6e2f0; background: #ffffff; opacity: 1">
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 20px">05</span>
+              <span style="display: flex; align-items: center; gap: 6px; font-weight: 700">อนุชา พ.<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148AEA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="ผ่านการรับรอง"><path d="M20 6 9 17l-5-5"></path></svg></span>
+              <span style="color: #3e4f66">สงขลา</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">11</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">80%</span>
+              <span style="text-align: right; font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 18px; font-variant-numeric: tabular-nums">89.80</span>
+              <span style="text-align: right; font-weight: 700; color: #0d6fc0">6,000 ฿</span>
+            </div>
+          
+            
+            <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) 150px 90px 90px 90px 104px; gap: 10px; align-items: center; padding: 11px 18px; border-top: 1.5px solid #d6e2f0; background: #ffffff; opacity: 1">
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 20px">06</span>
+              <span style="display: flex; align-items: center; gap: 6px; font-weight: 700">กมลวรรณ ท.<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148AEA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="ผ่านการรับรอง"><path d="M20 6 9 17l-5-5"></path></svg></span>
+              <span style="color: #3e4f66">อุดรธานี</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">11</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">78%</span>
+              <span style="text-align: right; font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 18px; font-variant-numeric: tabular-nums">88.40</span>
+              <span style="text-align: right; font-weight: 700; color: #0d6fc0">5,000 ฿</span>
+            </div>
+          
+            
+            <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) 150px 90px 90px 90px 104px; gap: 10px; align-items: center; padding: 11px 18px; border-top: 1.5px solid #d6e2f0; background: #ffffff; opacity: 1">
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 20px">07</span>
+              <span style="display: flex; align-items: center; gap: 6px; font-weight: 700">ธีรวัฒน์ จ.<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148AEA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="ผ่านการรับรอง"><path d="M20 6 9 17l-5-5"></path></svg></span>
+              <span style="color: #3e4f66">สุราษฎร์ธานี</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">10</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">75%</span>
+              <span style="text-align: right; font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 18px; font-variant-numeric: tabular-nums">86.90</span>
+              <span style="text-align: right; font-weight: 700; color: #0d6fc0">5,000 ฿</span>
+            </div>
+          
+            
+            <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) 150px 90px 90px 90px 104px; gap: 10px; align-items: center; padding: 11px 18px; border-top: 1.5px solid #d6e2f0; background: #ffffff; opacity: 1">
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 20px">08</span>
+              <span style="display: flex; align-items: center; gap: 6px; font-weight: 700">ศิริพร ล.<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148AEA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="ผ่านการรับรอง"><path d="M20 6 9 17l-5-5"></path></svg></span>
+              <span style="color: #3e4f66">นครศรีธรรมราช</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">10</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">70%</span>
+              <span style="text-align: right; font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 18px; font-variant-numeric: tabular-nums">85.00</span>
+              <span style="text-align: right; font-weight: 700; color: #0d6fc0">5,000 ฿</span>
+            </div>
+          
+            
+            <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) 150px 90px 90px 90px 104px; gap: 10px; align-items: center; padding: 11px 18px; border-top: 1.5px solid #d6e2f0; background: #ffffff; opacity: 1">
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 20px">09</span>
+              <span style="display: flex; align-items: center; gap: 6px; font-weight: 700">ประเสริฐ บ.<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148AEA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="ผ่านการรับรอง"><path d="M20 6 9 17l-5-5"></path></svg></span>
+              <span style="color: #3e4f66">ระยอง</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">9</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">72%</span>
+              <span style="text-align: right; font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 18px; font-variant-numeric: tabular-nums">83.75</span>
+              <span style="text-align: right; font-weight: 700; color: #0d6fc0">5,000 ฿</span>
+            </div>
+          
+            
+            <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) 150px 90px 90px 90px 104px; gap: 10px; align-items: center; padding: 11px 18px; border-top: 1.5px solid #d6e2f0; background: #ffffff; opacity: 1">
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 20px">10</span>
+              <span style="display: flex; align-items: center; gap: 6px; font-weight: 700">จันทร์เพ็ญ อ.<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148AEA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="ผ่านการรับรอง"><path d="M20 6 9 17l-5-5"></path></svg></span>
+              <span style="color: #3e4f66">กรุงเทพมหานคร</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">9</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">70%</span>
+              <span style="text-align: right; font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 18px; font-variant-numeric: tabular-nums">82.10</span>
+              <span style="text-align: right; font-weight: 700; color: #0d6fc0">5,000 ฿</span>
+            </div>
+          
+            
+              <div style="display: flex; align-items: center; gap: 10px; padding: 6px 18px; background: #baff19; font-size: 14px; font-weight: 800">เส้นรางวัล · กลุ่มจังหวัดใหญ่ 10 รางวัลต่อรอบ</div>
+            
+            <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) 150px 90px 90px 90px 104px; gap: 10px; align-items: center; padding: 11px 18px; border-top: 1.5px solid #d6e2f0; background: #ffffff; opacity: 0.65">
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 20px">11</span>
+              <span style="display: flex; align-items: center; gap: 6px; font-weight: 700">ชยพล ว.<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148AEA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="ผ่านการรับรอง"><path d="M20 6 9 17l-5-5"></path></svg></span>
+              <span style="color: #3e4f66">ปทุมธานี</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">8</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">66%</span>
+              <span style="text-align: right; font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 18px; font-variant-numeric: tabular-nums">80.40</span>
+              <span style="text-align: right; font-weight: 700; color: #0d6fc0">—</span>
+            </div>
+          
+            
+            <div style="display: grid; grid-template-columns: 56px minmax(0, 1fr) 150px 90px 90px 90px 104px; gap: 10px; align-items: center; padding: 11px 18px; border-top: 1.5px solid #d6e2f0; background: #ffffff; opacity: 0.65">
+              <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 20px">12</span>
+              <span style="display: flex; align-items: center; gap: 6px; font-weight: 700">อรอุมา ค.<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148AEA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="ผ่านการรับรอง"><path d="M20 6 9 17l-5-5"></path></svg></span>
+              <span style="color: #3e4f66">นนทบุรี</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">8</span>
+              <span style="text-align: right; font-variant-numeric: tabular-nums">65%</span>
+              <span style="text-align: right; font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 18px; font-variant-numeric: tabular-nums">79.25</span>
+              <span style="text-align: right; font-weight: 700; color: #0d6fc0">—</span>
+            </div>
+          
+        </div>
+      </div>
+      <p style="margin: 0; font-size: 15px; color: #4a5a70">คะแนนเท่ากันพิจารณา หน่วยผลงาน → อัตราผ่านครั้งแรก → พื้นที่ที่ครอบคลุม → เวลาที่ได้รับการรับรอง · <a href="rules.html#person">วิธีคิดคะแนน</a></p>
+    </div>
+
+    <aside style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+      <div style="border: 2.5px solid #17263D; border-radius: 18px; overflow: hidden">
+        <div style="padding: 12px 16px; background: #17263D; color: #ffffff; font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 18px">สถานะผลรอบที่ 1</div>
+        
+          <div style="display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; padding: 10px 16px; border-top: 0">
+            <span style="width: 18px; height: 18px; border-radius: 50%; margin-top: 4px; background: #17263D; border: 2.5px solid #17263D"></span>
+            <span><span style="display: block; font-weight: 700">แข่งขันรอบที่ 1</span><span style="display: block; font-size: 14.5px; color: #4a5a70">1–24 พ.ย. 2569</span></span>
+          </div>
+        
+          <div style="display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; padding: 10px 16px; border-top: 1.5px solid #d6e2f0">
+            <span style="width: 18px; height: 18px; border-radius: 50%; margin-top: 4px; background: #baff19; border: 2.5px solid #17263D"></span>
+            <span><span style="display: block; font-weight: 700">ผลเบื้องต้น</span><span style="display: block; font-size: 14.5px; color: #4a5a70">อัปเดตทุกครั้งที่ข้อมูลผ่านการรับรอง</span></span>
+          </div>
+        
+          <div style="display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; padding: 10px 16px; border-top: 1.5px solid #d6e2f0">
+            <span style="width: 18px; height: 18px; border-radius: 50%; margin-top: 4px; background: #ffffff; border: 2.5px solid #17263D"></span>
+            <span><span style="display: block; font-weight: 700">รับคำทักท้วง</span><span style="display: block; font-size: 14.5px; color: #4a5a70">4–7 ม.ค. 2570</span></span>
+          </div>
+        
+          <div style="display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; padding: 10px 16px; border-top: 1.5px solid #d6e2f0">
+            <span style="width: 18px; height: 18px; border-radius: 50%; margin-top: 4px; background: #ffffff; border: 2.5px solid #17263D"></span>
+            <span><span style="display: block; font-weight: 700">รับรองผลและประกาศ</span><span style="display: block; font-size: 14.5px; color: #4a5a70">8 ม.ค. 2570</span></span>
+          </div>
+        
+      </div>
+      <div style="border: 2.5px solid #17263D; border-radius: 18px; overflow: hidden">
+        <div style="padding: 12px 16px; background: #EAF5FF; border-bottom: 2px solid #17263D; font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 18px">โล่จังหวัด · กลุ่มใหญ่ (5 โล่)</div>
+        
+          <div style="display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 9px 16px; border-top: 0; opacity: 1">
+            <span style="display: grid; place-items: center; width: 30px; height: 30px; border-radius: 8px; background: #baff19; color: #17263D; font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 15px">1</span>
+            <span style="font-weight: 700">จังหวัดเชียงใหม่</span>
+            <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 800">98.50<span style="font-family: 'Sarabun', sans-serif; font-weight: 500; font-size: 13.5px; color: #4a5a70">/105</span></span>
+          </div>
+        
+          <div style="display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 9px 16px; border-top: 1.5px solid #d6e2f0; opacity: 1">
+            <span style="display: grid; place-items: center; width: 30px; height: 30px; border-radius: 8px; background: #baff19; color: #17263D; font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 15px">2</span>
+            <span style="font-weight: 700">จังหวัดขอนแก่น</span>
+            <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 800">96.00<span style="font-family: 'Sarabun', sans-serif; font-weight: 500; font-size: 13.5px; color: #4a5a70">/105</span></span>
+          </div>
+        
+          <div style="display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 9px 16px; border-top: 1.5px solid #d6e2f0; opacity: 1">
+            <span style="display: grid; place-items: center; width: 30px; height: 30px; border-radius: 8px; background: #baff19; color: #17263D; font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 15px">3</span>
+            <span style="font-weight: 700">จังหวัดนครราชสีมา</span>
+            <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 800">94.25<span style="font-family: 'Sarabun', sans-serif; font-weight: 500; font-size: 13.5px; color: #4a5a70">/105</span></span>
+          </div>
+        
+          <div style="display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 9px 16px; border-top: 1.5px solid #d6e2f0; opacity: 1">
+            <span style="display: grid; place-items: center; width: 30px; height: 30px; border-radius: 8px; background: #baff19; color: #17263D; font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 15px">4</span>
+            <span style="font-weight: 700">จังหวัดชลบุรี</span>
+            <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 800">92.00<span style="font-family: 'Sarabun', sans-serif; font-weight: 500; font-size: 13.5px; color: #4a5a70">/105</span></span>
+          </div>
+        
+          <div style="display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 9px 16px; border-top: 1.5px solid #d6e2f0; opacity: 1">
+            <span style="display: grid; place-items: center; width: 30px; height: 30px; border-radius: 8px; background: #baff19; color: #17263D; font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 15px">5</span>
+            <span style="font-weight: 700">จังหวัดสงขลา</span>
+            <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 800">90.75<span style="font-family: 'Sarabun', sans-serif; font-weight: 500; font-size: 13.5px; color: #4a5a70">/105</span></span>
+          </div>
+        
+          <div style="display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 9px 16px; border-top: 1.5px solid #d6e2f0; opacity: 0.6">
+            <span style="display: grid; place-items: center; width: 30px; height: 30px; border-radius: 8px; background: #EAF5FF; color: #17263D; font-family: 'Noto Sans Thai', sans-serif; font-weight: 900; font-size: 15px">6</span>
+            <span style="font-weight: 700">จังหวัดอุดรธานี</span>
+            <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 800">88.10<span style="font-family: 'Sarabun', sans-serif; font-weight: 500; font-size: 13.5px; color: #4a5a70">/105</span></span>
+          </div>
+        
+      </div>
+      <div style="background: #EAF5FF; border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 8px">
+        <span style="font-family: 'Noto Sans Thai', sans-serif; font-weight: 800; font-size: 18px">ผู้แข่งขันตรวจคะแนนตัวเองได้</span>
+        <span style="font-size: 15.5px; color: #3e4f66">ดูคะแนนแยกเกณฑ์และประวัติการรับรองทุกรายการ และยื่นทักท้วงได้ 4–7 ม.ค. 2570</span>
+        <a href="my.html" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 46px; padding: 0 16px; border-radius: 12px; border: 2.5px solid #17263D; background: #ffffff; color: #17263D; font-weight: 800; text-decoration: none">ไปที่การสมัครของฉัน</a>
+      </div>
+    </aside>
+  </div>
+</div>
+<script defer src="app.js"></script>
+</body>
+</html>

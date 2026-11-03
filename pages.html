@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TSA Challenge Prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#17263D;--lime:#baff19;--blue:#148AEA;--ice:#EAF5FF;--white:#FFFFFF;--mute:#4a5a70;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--white);color:var(--navy);font-family:'Sarabun',sans-serif;font-size:17px;line-height:1.6}
+header{background:var(--navy);color:var(--white)}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:20px}
+header .wrap{padding-block:34px 30px}
+.logo{display:block;width:120px;height:auto;object-fit:contain}
+h1{font-family:'Noto Sans Thai',sans-serif;font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1.15;margin:14px 0 6px;text-wrap:balance}
+header p{margin:0;color:#c6d3e4;max-width:62ch}
+main .wrap{padding-block:30px 56px;display:flex;flex-direction:column;gap:30px}
+h2{font-family:'Noto Sans Thai',sans-serif;font-weight:900;font-size:26px;margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+a.card{display:flex;flex-direction:column;gap:4px;min-height:96px;padding:16px 18px;border:2.5px solid var(--navy);border-radius:16px;color:var(--navy);text-decoration:none;background:var(--white);transition:transform .15s,box-shadow .15s}
+a.card:hover,a.card:focus-visible{transform:translate(-2px,-2px);box-shadow:5px 6px 0 var(--lime);outline:none}
+a.card b{font-family:'Noto Sans Thai',sans-serif;font-weight:800;font-size:19px}
+a.card span{font-size:15px;color:var(--mute)}
+a.card i{font-style:normal;align-self:flex-start;font-size:12.5px;font-weight:800;border-radius:999px;padding:1px 9px;background:var(--ice)}
+.note{background:var(--ice);border-radius:14px;padding:14px 16px;font-size:15.5px}
+@media (prefers-reduced-motion:reduce){a.card{transition:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <img class="logo" src="assets/tsa-logo.png" alt="Thailand Sports Almanac">
+  <h1>TSA Data to Value Challenge 2569 · ต้นแบบหน้าเว็บ</h1>
+  <p>หน้าเว็บต้นแบบ 11 หน้า สำหรับรับสมัครเข้าร่วมการแข่งขันเพิ่มข้อมูลกีฬา นำเสนอผล และระบบหลังบ้าน แตะการ์ดเพื่อเปิดแต่ละหน้า</p>
+</div></header>
+<main><div class="wrap">
+  <section>
+    <h2>หน้าเว็บสาธารณะ</h2>
+    <div class="grid">
+      <a class="card" href="index.html" target="_blank" rel="noopener"><i>คอมพิวเตอร์</i><b>หน้าแรก</b><span>ความคืบหน้าข้อมูล ขั้นตอนแข่ง การรับสมัคร รางวัล</span></a>
+      <a class="card" href="rules.html" target="_blank" rel="noopener"><i>คอมพิวเตอร์</i><b>กติกาและรางวัล</b><span>คะแนน โควตา ความเป็นธรรม ทักท้วง คำถามพบบ่อย</span></a>
+      <a class="card" href="results.html" target="_blank" rel="noopener"><i>คอมพิวเตอร์</i><b>ผลการแข่งขัน</b><span>โพเดียม ตารางอันดับ สถานะผล โล่จังหวัด</span></a>
+      <a class="card" href="register.html" target="_blank" rel="noopener"><i>คอมพิวเตอร์</i><b>สมัครเข้าร่วม</b><span>ฟอร์ม 4 ส่วน พร้อมสรุปการสมัคร</span></a>
+    </div>
+  </section>
+  <section>
+    <h2>มือถือ</h2>
+    <div class="grid">
+      <a class="card" href="m-register.html" target="_blank" rel="noopener"><i>มือถือ</i><b>สมัครเข้าร่วม</b><span>แตะเลือกเป็นหลัก แถบส่งอยู่ด้านล่าง</span></a>
+      <a class="card" href="m-results.html" target="_blank" rel="noopener"><i>มือถือ</i><b>ผลการแข่งขัน</b><span>การ์ดเรียงแนวตั้ง ไม่ต้องเลื่อนข้าง</span></a>
+      <a class="card" href="my.html" target="_blank" rel="noopener"><i>มือถือ</i><b>การสมัครและคะแนนของฉัน</b><span>สถานะ คะแนนแยกเกณฑ์ ภารกิจ คลินิก</span></a>
+    </div>
+  </section>
+  <section>
+    <h2>ระบบหลังบ้าน</h2>
+    <div class="grid">
+      <a class="card" href="admin.html" target="_blank" rel="noopener"><i>ผู้ดูแล</i><b>ภาพรวม</b><span>ตัวเลขสำคัญ งานที่ต้องทำ ประวัติการทำงาน</span></a>
+      <a class="card" href="admin-applicants.html" target="_blank" rel="noopener"><i>ผู้ดูแล</i><b>ผู้สมัคร</b><span>อนุมัติ ไม่อนุมัติพร้อมเหตุผล ตรวจข้อมูลซ้ำ</span></a>
+      <a class="card" href="admin-scores.html" target="_blank" rel="noopener"><i>ผู้ดูแล</i><b>คะแนนและประกาศผล</b><span>ตรวจก่อนประกาศ รับรองผล สรุปเงินรางวัล</span></a>
+      <a class="card" href="admin-rounds.html" target="_blank" rel="noopener"><i>ผู้ดูแล</i><b>รอบรับสมัครและอีเมล</b><span>ตั้งค่ารอบ ที่นั่ง เงื่อนไข อีเมลอัตโนมัติ</span></a>
+      <a class="card" href="admin-tools.html" target="_blank" rel="noopener"><i>ผู้ดูแล</i><b>เครื่องมือจัดการเพิ่มเติม</b><span>ภารกิจ กลุ่มจังหวัด คำทักท้วง ประวัติ และบทบาท</span></a>
+    </div>
+  </section>
+  <p class="note">แบบฟอร์มสมัครบันทึกข้อมูลไว้ในเบราว์เซอร์นี้เพื่อทดลองเท่านั้น ข้อมูลผลและหลังบ้านยังเป็นตัวอย่าง ไม่มีการเชื่อมฐานข้อมูลหรือส่งอีเมลจริง</p>
+</div></main>
+<script defer src="app.js"></script>
+</body>
+</html>
